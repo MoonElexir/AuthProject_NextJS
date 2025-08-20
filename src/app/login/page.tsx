@@ -14,15 +14,16 @@ export default function LoginPage() {
     password: "",
   });
 
-  const [buttonDisabled, setButtonDisabled] = React.useState(false);
+  const [buttonDisabled, setButtonDisabled] = React.useState(true);
   
-    useEffect(() => {
+   /* useEffect(() => {
       if (user.email.length > 0 && user.password.length > 0) {
-        setButtonDisabled(false);
-      } else {
         setButtonDisabled(true);
+      } else {
+        setButtonDisabled(false);
       }
-    });
+    } , [user] );
+     */
 
   
   const onLogin = async () => {
@@ -33,7 +34,7 @@ try {
   console.log("Login Success" , response.data);
   router.push('/profile');
 } catch (error : any) {
-  console.log("Login failed", error.message);
+  console.log("Can.t Login failed", error.message);
 }
 
   };
@@ -43,7 +44,6 @@ try {
       <h1>Login</h1>
       <hr />
       <label htmlFor="email">Email</label>
-
       <input
         type="text"
         id="email"
@@ -63,15 +63,17 @@ try {
         className=" border-2 border-gray-500 rounded-md  mb-2 px-2"
         onChange={(e) => setUser({ ...user, password: e.target.value })}
       />
+
+      <Link href= "/forgotpassword" className=" text-blue-400 text-sm " >Forgot Password? Click Here</Link>
       <button
         className="bg-pink-600 py-2 px-8 m-2   rounded-sm "
         onClick={onLogin}
         
       >
-       {buttonDisabled ?  "No Login" : "Login"}
+      Login
       </button>
 
-      <label className="mt-4">New? Make a Profile and SignUp</label>
+      <label className="mt-4">New Here? SignUp  and Make a Profile  </label>
       <Link
         href={"/signup"}
         className="bg-amber-600 py-2 px-8 m-2   rounded-sm "

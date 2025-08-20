@@ -14,8 +14,8 @@ export default function signupPage() {
     username: "",
   });
 
-  const [buttonDisabled, setButtonDisabled] = React.useState(false);
-
+  
+/*
   useEffect(() => {
     if (
       user.email.length > 0 &&
@@ -26,7 +26,7 @@ export default function signupPage() {
     } else {
       setButtonDisabled(true);
     }
-  }, [user]);
+  }, [user]); */
 
   const onSignup = async () => {
     try {
@@ -79,7 +79,7 @@ export default function signupPage() {
         className="bg-amber-600 py-2 px-8 m-2   rounded-sm "
         onClick={onSignup}
       >
-        {buttonDisabled ? "No SignUp" : "Signup"}
+        SignUp
       </button>
       <label className="mt-4">Already Have A Profile? Login</label>
       <Link href="/login" className="bg-pink-600 py-2 px-8 m-2   rounded-sm ">

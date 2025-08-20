@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Full-Stack User Authentication System
+This is a full-stack web application built with Next.js that provides a complete user authentication flow, including account creation, login, password reset, and email verification. The application uses MongoDB to store user data.
 
-## Getting Started
+✨ Features
+User Signup: Securely create new user accounts.
 
-First, run the development server:
+User Login: Authenticate existing users.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Password Reset: Users can reset their forgotten passwords via a secure link.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Email Verification: A user's email is verified through a unique token sent to their inbox.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Secure Authentication: User passwords are encrypted before being stored in the database.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Technologies Used
+Next.js: The React framework for production, providing server-side rendering and API routes.
 
-## Learn More
+React: For building the user interface.
 
-To learn more about Next.js, take a look at the following resources:
+Tailwind CSS: For rapid and responsive UI styling.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MongoDB: A NoSQL database for storing user data.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Mongoose: An elegant MongoDB object modeling tool for Node.js.
 
-## Deploy on Vercel
+Bcrypt.js: A library for hashing passwords.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Nodemailer: For sending emails for verification and password reset.
