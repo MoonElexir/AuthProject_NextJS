@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
     );
   } catch (error: any) {
     return NextResponse.json({
-      message: "Error Occured Sending MAil",
+      message: error.message,
     });
   }
 }
