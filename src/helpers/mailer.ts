@@ -44,9 +44,6 @@ export const sendEmail = async ({
       typeof process.env.MAIL_FROM,
       "MAIL FROM"
     );
-    console.log(process.env.PASS, typeof process.env.MAIL_FROM ,"PASS");
-    console.log(process.env.MAIL_PORT , "PORT");
-    console.log(process.env.USER, "USER");
 
     const mailOptions = {
       from: process.env.MAIL_FROM,
